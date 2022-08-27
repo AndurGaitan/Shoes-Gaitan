@@ -1,4 +1,6 @@
 import React from "react";
+import logo from "./img/logotipo.png";
+
 const Header = () => {
     return(
         <div className="contenedor">
@@ -6,7 +8,7 @@ const Header = () => {
                 
                 <ul class="nav justify-content-center">
                     <li class="nav-item ">
-                    <a class="nav-link active" aria-current="page" href="#/">Shoes</a>
+                    <a class="nav-link active" aria-current="page" href="#/"><img src={logo} alt="logoShoes" width="40" /></a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link letraMenu" href="#/">Hombre</a>

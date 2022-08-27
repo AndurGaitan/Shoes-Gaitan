@@ -4,15 +4,16 @@
     box-sizing: border-box;
 }
 .contenedor {
-    background-color: black;
+    background-color:#B5F230;
 }
 
 .letraMenu {
-    color: azure;
+    color: #0D0D0D;
 }
 
 .carrito {
-    color: white;
+    color: #0D0D0D;
+    align-content: center;
 }
 
 .card-img-top {
@@ -28,10 +29,14 @@
 }
 
 .fondoNegro {
-    background-color: black;
+    background-color: #B5F230;
     height: 100%;
 }
 
 .letraBlanca {
-    color: white;
+    color: #0D0D0D;
+}
+
+.btnNovo {
+    background-color: #B5F230;
 }

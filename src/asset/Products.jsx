@@ -8,7 +8,7 @@ const Products = () => {
                 <div class="card-body">
                     <h4 class="card-title">Zapatillas Adidas SSstar</h4>
                     <p class="card-text precio fs-5">$23000</p>
-                    <button href="#" class="btn button btn-primary">Agregar al carrito</button>
+                    <button href="#" class="btn button btnNovo">Agregar al carrito</button>
                 </div>
             </div>
             <div className="card" >
@@ -16,7 +16,7 @@ const Products = () => {
                 <div class="card-body">
                     <h4 class="card-title">Zapatillas Vans Oldskool</h4>
                     <p class="card-text precio fs-5">$23000</p>
-                    <button href="#" class="btn button btn-primary">Agregar al carrito</button>
+                    <button href="#" class="btn button btnNovo">Agregar al carrito</button>
                 </div>
             </div>
             <div className="card" >
@@ -24,7 +24,7 @@ const Products = () => {
                 <div class="card-body">
                     <h4 class="card-title">Zapatillas Nike Crimpact</h4>
                     <p class="card-text precio fs-5">$25000</p>
-                    <button href="#" class="btn button btn-primary">Agregar al carrito</button>
+                    <button href="#" class="btn button btnNovo">Agregar al carrito</button>
                 </div>
             </div>
             <div className="card" >
@@ -32,7 +32,7 @@ const Products = () => {
                 <div class="card-body">
                     <h4 class="card-title">Zapatillas Nike Huarache</h4>
                     <p class="card-text precio fs-5">$40000</p>
-                    <button href="#" class="btn button btn-primary">Agregar al carrito</button>
+                    <button href="#" class="btn button btnNovo">Agregar al carrito</button>
                 </div>
             </div>
             
