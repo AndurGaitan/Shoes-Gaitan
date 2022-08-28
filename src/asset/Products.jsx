@@ -1,13 +1,13 @@
 import React from "react";
 
-const Products = () => {
+const Products = (props) => {
     return (
         <div className="containerCard">
             <div className="card" >
-                <img src="https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw1e1cd6b9/products/AD_EG4958/AD_EG4958-1.JPG?sw=400&sh=400" class="card-img-top" alt="zapatilla" />
+                <img src={props.imagen} class="card-img-top" alt="zapatilla" />
                 <div class="card-body">
-                    <h4 class="card-title">Zapatillas Adidas SSstar</h4>
-                    <p class="card-text precio fs-5">$23000</p>
+                    <h4 class="card-title">{props.nombre}</h4>
+                    <p class="card-text precio fs-5">${props.precio}</p>
                     <button href="#" class="btn button btnNovo">Agregar al carrito</button>
                 </div>
             </div>

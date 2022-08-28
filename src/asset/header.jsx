@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./img/logotipo.png";
+import Cart from "./Cart";
 
 const Header = () => {
     return(
@@ -22,10 +23,9 @@ const Header = () => {
                     <li class="nav-item">
                     <a class="nav-link letraMenu" href="#/">Ofertas</a>
                     </li>
-                    <li class="nav-item">
-                    <i class="bi bi-cart carrito"></i>
-                    </li>
+                    <Cart/>
                 </ul>
+                
 
             </div>
             
