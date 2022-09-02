@@ -2,10 +2,10 @@ import React from "react";
 import logo from "./img/logotipo.png";
 import Cart from "./Cart";
 
-const Header = () => {
+const NavBar = () => {
     return(
-        <div className="contenedor">
-            <div className="row">
+        <header className="contenedor">
+            <nav className="row">
                 
                 <ul class="nav justify-content-center">
                     <li class="nav-item ">
@@ -27,10 +27,10 @@ const Header = () => {
                 </ul>
                 
 
-            </div>
+            </nav>
             
-        </div>
+        </header>
     )
 }
 
-export default Header;
+export default NavBar;

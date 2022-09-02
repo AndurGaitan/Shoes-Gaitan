@@ -12,6 +12,14 @@ const Products = (props) => {
                 </div>
             </div>
             <div className="card" >
+                <img src={props.imagen} class="card-img-top" alt="zapatilla" />
+                <div class="card-body">
+                    <h4 class="card-title">{props.nombre}</h4>
+                    <p class="card-text precio fs-5">${props.precio}</p>
+                    <button href="#" class="btn button btnNovo">Agregar al carrito</button>
+                </div>
+            </div>
+            <div className="card" >
                 <img src="https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw3c758933/products/VA_VN000KW6HR0/VA_VN000KW6HR0-1.JPG?sw=400&sh=400" class="card-img-top" alt="zapatilla" />
                 <div class="card-body">
                     <h4 class="card-title">Zapatillas Vans Oldskool</h4>
@@ -35,7 +43,7 @@ const Products = (props) => {
                     <button href="#" class="btn button btnNovo">Agregar al carrito</button>
                 </div>
             </div>
-            
+
         </div>
     )
 }
