@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./img/logotipo.png";
-import Cart from "./Cart";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     return(
@@ -23,7 +23,7 @@ const NavBar = () => {
                     <li class="nav-item">
                     <a class="nav-link letraMenu" href="#/">Ofertas</a>
                     </li>
-                    <Cart/>
+                    <CartWidget/>
                 </ul>
                 
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Item = (props) => {
+const ItemListContainer = (props) => {
     return(
         <div>
             <p style={{color: props.color}}>{props.greeting}</p>
@@ -8,4 +8,4 @@ const Item = (props) => {
     )
 }
 
-export default Item;
+export default ItemListContainer;
