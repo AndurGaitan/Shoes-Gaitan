@@ -26,22 +26,18 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     return (
-        <div className="container py-5">
-            <div className="row">
-                <div className="col-md-2">
-                    <p className="text-center">Nombre del producto</p>
+                <div>
                     <div className="input-group">
                         <input type="button" className="btn btn-secondary" value="-" onClick={() => { decrementarCantidad(cantidad - 1) }} />
                         <input type="text" className="form-control" value={cantidad} onChange={() => {}}/>
                         <input type="button" className="btn btn-secondary" value="+" onClick={() => { incrementarCantidad(cantidad + 1) }} />
                     </div>
                     <div className="d-grid gap-2 py-3">
-                        <input type="button" className="btn btn-secondary" value="Agregar" onClick={() => {agregarProductos()}} />
+                        <input type="button" className="btn btnNovo" value="Agregar" onClick={() => {agregarProductos()}} />
                     </div>
                     <p>Productos seleccionados: {itemAdd}</p>
                 </div>
-            </div>
-        </div>
+
     )
 }
 

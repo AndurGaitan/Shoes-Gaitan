@@ -1,4 +1,5 @@
 import React from "react";
+import ItemCount from "./ItemCount";
 
 
 const ItemDetail = ({ items }) => {
@@ -13,8 +14,9 @@ const ItemDetail = ({ items }) => {
                     <p>{items.detalle}</p>
                     <b>${items.precio}</b>
                     <br/>
-                    <button href="#" className="btn button btnNovo">COMPRAR</button>
+                    <ItemCount stock={5} initial={1} onAdd={0}/>
                 </div>
+                 
             </div>
         </div>
     )
