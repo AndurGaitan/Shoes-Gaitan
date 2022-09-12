@@ -1,25 +1,25 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { products } from "./Products";
 
 const ItemDetailContainer = (props) =>{
     const [items, setItems] = useState({});
+    const {id} = useParams();
 
     useEffect(()=>{
         const getItems = () => 
         new Promise((res, rej) => {
-            const product = products.find((prod) => prod.id === 1)
-
-            setTimeout(() => {
+            const product = products.find((prod) => prod.id === 5)
+                setTimeout(() => {
                 res(product);
             }, 2000);
         });
         getItems()
         .then ((info)=>{
             setItems(info)
-            console.log(info)
         })
         .catch((error)=>{
             console.log(error)
@@ -27,7 +27,7 @@ const ItemDetailContainer = (props) =>{
 
 
 
-    },[]);
+    },[id]);
 
     return(
         <div className="container">
