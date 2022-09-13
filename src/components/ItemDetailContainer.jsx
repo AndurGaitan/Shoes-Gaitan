@@ -12,10 +12,10 @@ const ItemDetailContainer = (props) =>{
     useEffect(()=>{
         const getItems = () => 
         new Promise((res, rej) => {
-            const product = products.find((prod) => prod.id === 5)
+            const product = products.find((prod) => prod.id === {id})
                 setTimeout(() => {
                 res(product);
-            }, 2000);
+            }, 500);
         });
         getItems()
         .then ((info)=>{

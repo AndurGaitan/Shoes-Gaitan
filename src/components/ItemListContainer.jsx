@@ -23,7 +23,7 @@ const ItemListContainer = (props) => {
         const getProductos = new Promise((resolve) => {
             setTimeout(() => {
                 resolve(products);
-            }, 2000);
+            }, 500);
         });
 
         getProductos.then((respuesta) => {
@@ -31,7 +31,7 @@ const ItemListContainer = (props) => {
             setItems(respuesta);
             console.log(respuesta)
         } else {
-            const array_productos = respuesta.filter(producto => producto.categoria === "categoria")
+            const array_productos = respuesta.filter(producto => producto.categoria === categoria)
             setItems(array_productos)
             
         }
