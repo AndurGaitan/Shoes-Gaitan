@@ -8,11 +8,13 @@ import { products } from "./Products";
 const ItemDetailContainer = (props) =>{
     const [items, setItems] = useState({});
     const {id} = useParams();
+    console.log(id)
 
     useEffect(()=>{
-        const getItems = () => 
+        const getItems = (id) => 
         new Promise((res, rej) => {
             const product = products.find((prod) => prod.id === {id})
+          
                 setTimeout(() => {
                 res(product);
             }, 500);
@@ -24,9 +26,6 @@ const ItemDetailContainer = (props) =>{
         .catch((error)=>{
             console.log(error)
         })
-
-
-
     },[id]);
 
     return(

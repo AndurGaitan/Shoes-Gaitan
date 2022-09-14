@@ -29,7 +29,6 @@ const ItemListContainer = (props) => {
         getProductos.then((respuesta) => {
             if (categoria === "all"){
             setItems(respuesta);
-            console.log(respuesta)
         } else {
             const array_productos = respuesta.filter(producto => producto.categoria === categoria)
             setItems(array_productos)
