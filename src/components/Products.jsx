@@ -1,6 +1,6 @@
 export const products = [
     {
-        "id": 1,
+        "id": "1",
         "nombre": "Zapatillas adidas Superstar",
         "precio": 36000,
         "categoria":"men",
@@ -13,7 +13,7 @@ export const products = [
     },
 
     {
-        "id": 2,
+        "id": "2",
         "nombre": "Zapatillas Fila Float Renno",
         "precio": 23000,
         "categoria":"women",
@@ -25,7 +25,7 @@ export const products = [
     },
 
     {
-        "id": 3,
+        "id": "3",
         "nombre": "Zapatillas Vans U Authentic",
         "precio": 20700,
         "categoria":"men",
@@ -38,7 +38,7 @@ export const products = [
     },
 
     {
-        "id": 4,
+        "id": "4",
         "nombre": "Zapatillas Nike Air Max",
         "precio": 40000,
         "categoria":"men",
@@ -50,7 +50,7 @@ export const products = [
     },
 
     {
-        "id": 5,
+        "id": "5",
         "nombre": "Zapatillas Nike Huarache",
         "precio": 42000,
         "categoria":"women",
@@ -62,7 +62,7 @@ export const products = [
     },
 
     {
-        "id": 6,
+        "id": "6",
         "nombre": "Zapatillas Nike Max Dawn",
         "precio": 41000,
         "categoria":"men",
@@ -74,7 +74,7 @@ export const products = [
     },
 
     {
-        "id": 7,
+        "id": "7",
         "nombre": "Zapatillas Nike Waffle One",
         "precio": 36000,
         "categoria":"women",
@@ -86,7 +86,7 @@ export const products = [
     },
 
     {
-        "id": 8,
+        "id": "8",
         "nombre": "Zapatillas Fila Sandenal",
         "precio": 29000,
         "categoria":"women",
@@ -98,7 +98,7 @@ export const products = [
     },
 
     {
-        "id": 9,
+        "id": "9",
         "nombre": "Zapatillas adidas Lite Racer",
         "precio": 24000,
         "categoria":"men",

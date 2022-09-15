@@ -4,7 +4,6 @@ import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Banner from "./components/Banner";
-
 import ItemDetailContainer from './components/ItemDetailContainer';
 
 
@@ -17,7 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<ItemListContainer/>}/>
         <Route exact path='/categoria/:genero' element={<ItemListContainer/>}/>
-        <Route exact path='/producto/:id' element={<ItemDetailContainer/>}/>
+        <Route exact path="/producto/:id" element={<ItemDetailContainer/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>    

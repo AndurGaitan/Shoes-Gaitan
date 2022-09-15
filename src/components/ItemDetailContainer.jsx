@@ -5,16 +5,14 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { products } from "./Products";
 
-const ItemDetailContainer = (props) =>{
+const ItemDetailContainer = () =>{
     const [items, setItems] = useState({});
     const {id} = useParams();
-    console.log(id)
-
     useEffect(()=>{
-        const getItems = (id) => 
+        const getItems = () => 
         new Promise((res, rej) => {
-            const product = products.find((prod) => prod.id === {id})
-          
+            const product = products.find((prod) => prod.id === id)
+            console.log(product)
                 setTimeout(() => {
                 res(product);
             }, 500);
