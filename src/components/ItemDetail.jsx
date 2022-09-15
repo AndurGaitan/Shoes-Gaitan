@@ -35,7 +35,7 @@ const ItemDetail = ({items}) => {
                 </div>
                 <div className="col-md-4">
                     <h1>{items.nombre}</h1>
-                    <p>{items.detalle}</p>
+                    <p>{items.description}</p>
                     <b>{items.precio}</b>
                     <br />
                     <ItemCount stock={5} initial={1} onAdd={0} />

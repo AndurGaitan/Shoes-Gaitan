@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./img/logotipo.png";
+import logo from "../img/logotipo.png";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
