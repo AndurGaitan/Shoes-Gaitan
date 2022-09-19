@@ -40,3 +40,22 @@
 .btnNovo {
     background-color: #B5F230;
 }
+
+.btn-counter {
+    font-size: 17px;
+    border: none;
+    background-color: #181818;
+    color: white;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.btn-add {
+    font-size: 18px;
+    border: none;
+    background-color: white;
+    color: #181818;
+    border-radius: 6px;
+    padding: 10px;
+    border: 2px solid #181818;
+}

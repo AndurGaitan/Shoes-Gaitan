@@ -1,26 +1,38 @@
 import React from "react";
+import { useState } from "react";
+// import { useContext } from "react";
+// import { CartContext } from "../context/cartContext";
 import ItemCount from "./ItemCount";
+import {Link} from "react-router-dom";
 
 
 const ItemDetail = ({items}) => {
-    console.log(items)
+    const {goToCart, setGoToCart} = useState(false);
+    // const {addToCart} = useContext(CartContext);
+
+    const onAdd = (cantidad) => {
+        // addToCart(items, cantidad)
+        setGoToCart(true);
+
+    };
+
     return (
         <div className="container">
             <div className="row">
                 <div className="col-md-4 offset-md-2">
-                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active" data-bs-interval="10000">
-                                <img src={items.imagen} class="d-block w-100" alt={items.nombre}/>
+                                <img src={items.imagen} className="d-block w-100" alt={items.nombre}/>
                             </div>
                             <div className="carousel-item" data-bs-interval="2000">
-                                <img src={items.imagen1} class="d-block w-100" alt={items.nombre}/>
+                                <img src={items.imagen1} className="d-block w-100" alt={items.nombre}/>
                             </div>
                             <div className="carousel-item">
-                                <img src={items.imagen2} class="d-block w-100" alt={items.nombre}/>
+                                <img src={items.imagen2} className="d-block w-100" alt={items.nombre}/>
                             </div>
                             <div className="carousel-item">
-                                <img src={items.imagen3} class="d-block w-100" alt={items.nombre}/>
+                                <img src={items.imagen3} className="d-block w-100" alt={items.nombre}/>
                             </div>
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -38,7 +50,12 @@ const ItemDetail = ({items}) => {
                     <p>{items.description}</p>
                     <b>{items.precio}</b>
                     <br />
-                    <ItemCount stock={5} initial={1} onAdd={0} />
+                    {
+                    goToCart
+                    ? <Link to='/cart'>Finalizar Compra</Link>
+                    : <ItemCount stock={5} initial={1} onAdd={onAdd} />
+                    }
+
                 </div>
 
             </div>
