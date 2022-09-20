@@ -1,16 +1,18 @@
 import React from "react";
 import { useEffect } from "react";
-import { useContext } from "react";
+// import { useContext } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { products } from "./Products";
-import { CartContext } from "../context/cartContext";
+// import { CartContext } from "../context/cartContext";
+import Loanding from "./Loanding";
 
 const ItemDetailContainer = () =>{
     const [items, setItems] = useState({});
+    const [loading, setLoanding] = useState(true);
     const {id} = useParams();
-    const valores = useContext(CartContext);
+    // const valores = useContext(CartContext);
 
 
 
@@ -25,6 +27,7 @@ const ItemDetailContainer = () =>{
         getItems()
         .then ((info)=>{
             setItems(info)
+            setLoanding(false)
         })
         .catch((error)=>{
             console.log(error)
@@ -33,7 +36,8 @@ const ItemDetailContainer = () =>{
 
     return(
         <div className="container">
-            <ItemDetail items={items}/>
+            {loading ? <Loanding/> : <ItemDetail items={items}/>}
+            
         </div>
     )
 }

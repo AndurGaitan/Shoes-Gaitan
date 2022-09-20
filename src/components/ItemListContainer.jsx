@@ -3,10 +3,12 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
+import Loanding from "./Loanding";
 import { products } from "./Products";
 
 const ItemListContainer = (props) => {
     const [items, setItems] = useState([]);
+    const [loading, setLoanding] = useState(true)
     const {genero} = useParams();
 
     useEffect(() => {
@@ -29,6 +31,7 @@ const ItemListContainer = (props) => {
         getProductos.then((respuesta) => {
             if (categoria === "all"){
             setItems(respuesta);
+            setLoanding(false)
         } else {
             const array_productos = respuesta.filter(producto => producto.categoria === categoria)
             setItems(array_productos)
@@ -40,8 +43,7 @@ const ItemListContainer = (props) => {
 
     return (
         <div className="container">
-            <ItemList items={items} />
-
+            {loading ? <Loanding/> : <ItemList items={items} />}
         </div>
     )
 }

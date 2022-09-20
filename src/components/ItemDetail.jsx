@@ -7,14 +7,17 @@ import {Link} from "react-router-dom";
 
 
 const ItemDetail = ({items}) => {
-    const {goToCart, setGoToCart} = useState(false);
+    const [goToCart, setGoToCart] = useState(false);
     // const {addToCart} = useContext(CartContext);
 
     const onAdd = (cantidad) => {
         // addToCart(items, cantidad)
         setGoToCart(true);
+        console.log(setGoToCart)
 
     };
+
+   
 
     return (
         <div className="container">
@@ -52,7 +55,7 @@ const ItemDetail = ({items}) => {
                     <br />
                     {
                     goToCart
-                    ? <Link to='/cart'>Finalizar Compra</Link>
+                    ? <button className="btn btnNovo"><Link to='/cart'>Finalizar Compra</Link></button>
                     : <ItemCount stock={5} initial={1} onAdd={onAdd} />
                     }
 
