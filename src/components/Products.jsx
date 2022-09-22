@@ -45,7 +45,7 @@ export const products = [
         "precio": 40000,
         "categoria": "men",
         "stock": 7,
-        "imagen": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw36e6b507/products/NI_DB2477-300/NI_DB2477-300-1.JPG?sw=400&sh=400",
+        "imagen": "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw7c433248/products/NI_DC5421-002/NI_DC5421-002-1.JPG",
         "imagen1": "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw328fd0cf/products/NI_DC5421-002/NI_DC5421-002-3.JPG",
         "imagen2": "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwe7fb2e66/products/NI_DC5421-002/NI_DC5421-002-4.JPG",
         "imagen3": "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw025c2f3d/products/NI_DC5421-002/NI_DC5421-002-6.JPG",

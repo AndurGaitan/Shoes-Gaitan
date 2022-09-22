@@ -8,7 +8,7 @@ const CartWidget = () => {
     const units = totalUnits()
     return (
         <Link to="/cart">
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', color: 'black' }}>
                 <span className="material-icons">shopping_cart</span>
                 <span>{units}</span>
             </div>
