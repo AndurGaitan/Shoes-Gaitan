@@ -9,7 +9,7 @@ const CartWidget = () => {
     return (
         <Link to="/cart">
             <div style={{ display: 'flex', alignItems: 'center', color: 'black' }}>
-                <span className="material-icons">shopping_cart</span>
+                <i class="bi bi-cart"></i>
                 <span>{units}</span>
             </div>
         </Link>

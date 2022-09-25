@@ -1,15 +1,24 @@
 import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {
-    const { cart, deleteOne, clearCart } = useContext(CartContext)
+    const { cart, deleteOne, clearCart, totalPrice, totalUnits } = useContext(CartContext)
+    const total = totalPrice()
+    const totalUni = totalUnits()
     return (
         <div className="container mb-5">
             <div className="row">
-                <div className="col-lg-12">
+                {
+                    totalUni === 0
+                    ? <div>
+                        <h1 className="text-center">El carrito esta vacio</h1>
+                        <button className="btn btnNovo"><Link to='/'>IR A COMPRAR</Link></button>
+                      </div>
+                    :
+                    <div className="col-lg-12"> 
                     <h2 className="mt-5">Mi carrito</h2>
                     <div className="col-12">
                     {cart.map((producto) => (
@@ -64,7 +73,11 @@ const Cart = () => {
                     ))}
                     </div>
                     <button className="delete btn btn-danger mb-8" onClick={clearCart}>Delete all</button>
+                    <h2 className="mt-3">Total: $ {total}</h2>
                 </div>
+
+                }
+
             </div>
         </div>
     )

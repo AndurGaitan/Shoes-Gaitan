@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import { products } from "./Products";
 // import { CartContext } from "../context/cartContext";
 import Loanding from "./Loanding";
+import { getFirestore, getDoc, doc} from "firebase/firestore"
 
 const ItemDetailContainer = () =>{
     const [items, setItems] = useState({});
@@ -14,24 +14,16 @@ const ItemDetailContainer = () =>{
     const {id} = useParams();
     // const valores = useContext(CartContext);
 
-
-
     useEffect(()=>{
-        const getItems = () => 
-        new Promise((res, rej) => {
-            const product = products.find((prod) => prod.id === id)
-                setTimeout(() => {
-                res(product);
-            }, 500);
+        const db = getFirestore();
+        const selection = doc(db, "items", id);
+        getDoc(selection).then((snapshot) => {
+            if (snapshot.exists()){
+                setItems({id: snapshot.id, ...snapshot.data()});
+            }
+            setLoanding(false);
         });
-        getItems()
-        .then ((info)=>{
-            setItems(info)
-            setLoanding(false)
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
+
     },[id]);
 
     return(

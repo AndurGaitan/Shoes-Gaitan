@@ -14,7 +14,7 @@ export const products = [
 
     {
         "id": "2",
-        "nombre": "Zapatillas Fila Float Renno",
+        "nombre": "Zapatillas Fila Float Renno",    
         "precio": 23000,
         "categoria": "women",
         "stock": 5,

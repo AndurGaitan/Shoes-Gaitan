@@ -55,9 +55,12 @@ const ItemDetail = ({items}) => {
                     <br />
                     {
                     goToCart
-                    ? <button className="btn btnNovo"><Link to='/cart'>Finalizar Compra</Link></button>
+                    ? <div className="btn-group">
+                        <button className="btn btnNovo"><Link to='/cart'>Finalizar Compra</Link></button>
+                        <button className="btn btn-dark"><Link to='/'>Seguir comprando</Link></button>
+                      </div>
                     : <ItemCount stock={5} initial={1} onAdd={onAdd} />
-                    }
+                    }   
 
                 </div>
 
