@@ -20,6 +20,7 @@ const Cart = () => {
                     :
                     <div className="col-lg-12"> 
                     <h2 className="mt-5">Mi carrito</h2>
+                    <button className="delete btn btn-danger mb-8" onClick={clearCart}>Delete all</button>
                     <div className="col-12">
                     {cart.map((producto) => (
                         <div key={producto.id}>
@@ -72,8 +73,8 @@ const Cart = () => {
 
                     ))}
                     </div>
-                    <button className="delete btn btn-danger mb-8" onClick={clearCart}>Delete all</button>
                     <h2 className="mt-3">Total: $ {total}</h2>
+                    <button className="delete btn btn-primary mb-8">Finalizar compra</button>
                 </div>
 
                 }

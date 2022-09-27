@@ -19,10 +19,10 @@ const NavBar = () => {
                     <Link className="nav-link letraMenu" to={"/categoria/women"}>Mujer</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link letraMenu" to={"/"}>Brands</Link>
+                    <Link className="nav-link letraMenu" to={"/categoria/mochila"}>Mochilas</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link letraMenu" to={"/"}>Ofertas</Link>
+                    <Link className="nav-link letraMenu" to={"/categoria/gorras"}>Gorras</Link>
                     </li>
                     <CartWidget/>
                 </ul>

@@ -11,13 +11,24 @@ const ItemListContainer = (props) => {
     const [items, setItems] = useState([]);
     const [loading, setLoanding] = useState(true)
     const {id} = useParams();
+    // const {categoria} = useParams();
+    // console.log(categoria)
     // const {genero} = useParams();
 
     useEffect(() => {
         const db = getFirestore();
+        // const q = query(
+        //     collection(db, "items"),
+        //     where("categoria", "==", "mochila"),
+        //     where("categoria", "==", "gorras")
+        // );
         const itemsCollection = collection(db, "items");
         const queryItems = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection
+        // const queryFilter = categoria ? query (itemsCollection, where("categoria", "==", categoria)) : itemsCollection
         getDocs(queryItems).then((snapshot) =>{
+            if (snapshot.size === 0) {
+                console.log("No hay resultado")
+            }
             setItems(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
             setLoanding(false)
         });
