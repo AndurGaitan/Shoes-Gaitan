@@ -74,7 +74,9 @@ const Cart = () => {
                     ))}
                     </div>
                     <h2 className="mt-3">Total: $ {total}</h2>
-                    <button className="delete btn btn-primary mb-8">Finalizar compra</button>
+                    <Link to={"/checkout"} title="Finalizar Compra">
+                    <button className="delete btn btnNovo mb-8">Finalizar compra</button>
+                    </Link>
                 </div>
 
                 }

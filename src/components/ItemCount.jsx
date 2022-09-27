@@ -13,7 +13,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     };
 
     return (
-        <div>
+        <div className="mt-2">
             <div className="input-group">
                 <button className="btn btnNovo" onClick={restar}>
                     -

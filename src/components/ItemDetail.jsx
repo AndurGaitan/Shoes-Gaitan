@@ -49,7 +49,7 @@ const ItemDetail = ({items}) => {
                 <div className="col-md-4">
                     <h1>{items.nombre}</h1>
                     <p>{items.description}</p>
-                    <b>{items.precio}</b>
+                    <b className="price"> $ {items.precio}</b>
                     <br />
                     {
                     goToCart
