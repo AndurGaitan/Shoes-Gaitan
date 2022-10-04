@@ -3,13 +3,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import Loanding from "./Loanding";
+import Loader from "./Loader";
 // import { products } from "./Products";
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 
+
 const ItemListContainer = (props) => {
     const [items, setItems] = useState([]);
-    const [loading, setLoanding] = useState(true)
+    const [loading, setLoading] = useState(true)
     const {id} = useParams();
 
     useEffect(() => {
@@ -22,13 +23,13 @@ const ItemListContainer = (props) => {
                 console.log("No hay resultado")
             }
             setItems(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
-            setLoanding(false)
+            setLoading(false)
         });
     }, [id]);
 
     return (
         <div className="container">
-            {loading ? <Loanding/> : <ItemList items={items} />}
+            {loading ? <Loader/> : <ItemList items={items} />}
         </div>
     )
 }

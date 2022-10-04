@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loanding = () => {
+const Loader = () => {
     return (
         <div className="text-center">
             <div className="spinner-border" role="status">
@@ -10,4 +10,4 @@ const Loanding = () => {
     )
 }
 
-export default Loanding;
+export default Loader;

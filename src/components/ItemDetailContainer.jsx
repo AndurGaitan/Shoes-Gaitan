@@ -5,12 +5,12 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 // import { CartContext } from "../context/cartContext";
-import Loanding from "./Loanding";
+import Loader from "./Loader";
 import { getFirestore, getDoc, doc} from "firebase/firestore"
 
 const ItemDetailContainer = () =>{
     const [items, setItems] = useState({});
-    const [loading, setLoanding] = useState(true);
+    const [loading, setLoading] = useState(true);
     const {id} = useParams();
     // const valores = useContext(CartContext);
 
@@ -21,14 +21,14 @@ const ItemDetailContainer = () =>{
             if (snapshot.exists()){
                 setItems({id: snapshot.id, ...snapshot.data()});
             }
-            setLoanding(false);
+            setLoading(false);
         });
 
     },[id]);
 
     return(
         <div className="container">
-            {loading ? <Loanding/> : <ItemDetail items={items}/>}
+            {loading ? <Loader/> : <ItemDetail items={items}/>}
             
         </div>
     )
