@@ -53,7 +53,7 @@ const ItemDetail = ({items}) => {
                     <br />
                     {
                     goToCart
-                    ? <div className="btn-group">
+                    ? <div className="btn-group mb-5">
                         <button className="btn btnNovo"><Link to='/cart'>Finalizar Compra</Link></button>
                         <button className="btn btn-dark"><Link to='/'>Seguir comprando</Link></button>
                       </div>

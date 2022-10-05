@@ -1,8 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { CartContext } from "../context/cartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Success from "./Success";
 
@@ -12,6 +11,7 @@ const Checkout = () => {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [orderId, setOrderId] = useState("");
+    const [orderName, setOrderName] = useState("");
 
     const sendOrder = () => {
         const buyer = { name: name, email: email, phone: phone };
@@ -20,17 +20,15 @@ const Checkout = () => {
             items.push({ id: item.id, name: item.nombre, price: item.precio, quantity: item.cantidad });
         })
         const order = { buyer: buyer, items: items, total: totalPrice() }
-        //console.log(order);
+        setOrderName(order.buyer.name)
+        console.log(order.buyer.name);
         const db = getFirestore();
         const orderCollection = collection(db, "orders");
         addDoc(orderCollection, order).then((data) => {
-            setOrderId(data.id)
+            setOrderId(data.id) 
             clearCart()
-            
-            console.log("El numero de orden es" + data.id)
-
         });
-
+        
     }
     return (
         <div className="container py-5">
@@ -53,7 +51,7 @@ const Checkout = () => {
                         <button type="button" className="btn btnNovo" onClick={() => sendOrder()}>Generar orden</button>
                     </div>
                 </div>
-                : orderId !== "" ? <Success id={orderId}/>
+                : orderId !== "" ? <Success id={orderId} name={orderName}/>
                 : <div>
                     <h1 className="text-center">El carrito esta vacio</h1>
                     <button className="btn btnNovo"><Link to='/'>IR A COMPRAR</Link></button>

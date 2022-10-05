@@ -7,12 +7,14 @@ const CartWidget = () => {
     const { totalUnits } = useContext(CartContext)
     const units = totalUnits()
     return (
+        <div className="mt-2">
         <Link to="/cart">
-            <div style={{ display: 'flex', alignItems: 'center', color: 'black' }}>
+            <div style={{ display: 'flex', color: 'black',  }}>
                 <i class="bi bi-cart"></i>
                 <span>{units}</span>
             </div>
         </Link>
+        </div>
     )
 }
 
