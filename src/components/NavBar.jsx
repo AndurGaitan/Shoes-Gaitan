@@ -7,7 +7,6 @@ const NavBar = () => {
     return(
         <header className="contenedor">
             <nav className="row">
-                
                 <ul className="nav justify-content-center">
                     <li className="nav-item ">
                     <Link className="nav-link active" aria-current="page" to={"/"}><img src={logo} alt="logoShoes" width="40" /></Link>
@@ -26,8 +25,7 @@ const NavBar = () => {
                     </li>
                     <CartWidget/>
                 </ul>
-                
-
+            
             </nav>
             
         </header>

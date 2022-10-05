@@ -7,12 +7,10 @@ const CartProvider = (props) => {
     const [cart, setCart] = useState([]);
 
     console.log("carrito:", cart);
-    //Function Cart
     const addToCart = (items, cantidad) => {
         const producto = { ...items, cantidad };
         if (isInCart(producto.id)) {
             addQuantity(producto);
-            //Busco el producto y le sumo la cantidad
         } else {
             setCart([...cart, producto]);
         }

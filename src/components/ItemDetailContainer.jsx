@@ -1,10 +1,6 @@
 import React from "react";
-import { useEffect } from "react";
-// import { useContext } from "react";
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState, useParams } from "react";
 import ItemDetail from "./ItemDetail";
-// import { CartContext } from "../context/cartContext";
 import Loader from "./Loader";
 import { getFirestore, getDoc, doc} from "firebase/firestore"
 
@@ -12,7 +8,6 @@ const ItemDetailContainer = () =>{
     const [items, setItems] = useState({});
     const [loading, setLoading] = useState(true);
     const {id} = useParams();
-    // const valores = useContext(CartContext);
 
     useEffect(()=>{
         const db = getFirestore();
