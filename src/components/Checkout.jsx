@@ -34,7 +34,7 @@ const Checkout = () => {
         <div className="container py-5">
             {totalUnits() > 0 ?
                 <div className="row">
-                    <div className="col-md-4 offset-md-2">
+                    <div className="col-md-8 offset-md-2">
                         <div className="mb-3">
                             <h1 className="text-center">Formulario de contacto</h1>
                         </div>
@@ -57,7 +57,7 @@ const Checkout = () => {
                 : orderId !== "" ? <Success id={orderId} name={orderName}/>
                 : <div>
                     <h1 className="text-center">El carrito esta vacio</h1>
-                    <button className="btn btnNovo"><Link to='/'>IR A COMPRAR</Link></button>
+                    <button className="btn btnNovo"><Link className="text-Fin" to='/'>IR A COMPRAR</Link></button>
                   </div>
                 }
         </div>
