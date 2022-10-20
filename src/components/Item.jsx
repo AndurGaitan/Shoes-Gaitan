@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Item = ({imagen, precio, nombre, id}) => {
     return (
-            <div className="card" >
+            <div className="card">
                 <div className="text-center"><Link to={"/producto/" + id}><img src={imagen} className="card-img-top" alt={nombre}/></Link></div>
                 <div className="card-body">
                     <h4 className="card-title text-center"><b>{nombre}</b></h4>

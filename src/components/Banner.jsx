@@ -1,11 +1,25 @@
 import React from "react";
 import banner1 from "../img/BannerSale1.png";
 import banner2 from "../img/BannerSale1.png";
+import { motion } from "framer-motion";
 
 const Banner = () => {
     return (
         <div className="container">
             <div className="row">
+                <div className="text-center">
+                <motion.h1
+                 initial={{scale: 0}}
+                 animate={{scale: 1}}
+                 transition={{
+                    duration: 2,
+                    ease: 'easeInOut',
+                    type: 'spring'
+                 }}
+                 >
+                    Bienvenido a MyShoes
+                </motion.h1>
+                </div>
                 <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">

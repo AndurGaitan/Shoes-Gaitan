@@ -20,7 +20,7 @@ const ItemDetail = ({items}) => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-md-4 offset-md-2">
+                <div className="col-md-5 offset-md-2 mt-4">
                     <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active" data-bs-interval="10000">
@@ -46,16 +46,16 @@ const ItemDetail = ({items}) => {
                         </button>
                     </div>
                 </div>
-                <div className="col-md-4">
-                    <h1>{items.nombre}</h1>
+                <div className="col-md-4 mt-4">
+                    <h1 className="text-center">{items.nombre}</h1>
                     <p>{items.description}</p>
                     <b className="price"> $ {items.precio}</b>
                     <br />
                     {
                     goToCart
                     ? <div className="btn-group mb-5">
-                        <button className="btn btnNovo"><Link to='/cart'>Finalizar Compra</Link></button>
-                        <button className="btn btn-dark"><Link to='/'>Seguir comprando</Link></button>
+                        <button className="btn btnNovo"><Link className="text-Fin" to='/cart'>Finalizar Compra</Link></button>
+                        <button className="btn btn-dark"><Link className="text-Con" to='/'>Seguir comprando</Link></button>
                       </div>
                     : <ItemCount stock={5} initial={1} onAdd={onAdd} />
                     }   

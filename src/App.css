@@ -6,7 +6,9 @@
 }
 
 .contenedor {
-    background-color: #B5F230;
+    background-color: #F6F6F6F6;
+    box-shadow: 2px 2px 8px #bebebe,
+        -15px -15px 30px #ffffff;
 }
 
 .letraMenu {
@@ -32,7 +34,9 @@
 }
 
 .fondoNegro {
-    background-color: #B5F230;
+    background-color: #F6F6F6F6;
+    box-shadow: 2px 2px 8px #bebebe,
+        -15px -15px 30px #ffffff;
     width: 100%;
 }
 
@@ -71,8 +75,9 @@
     border-radius: 30px;
     background: white;
     box-shadow: 2px 2px 8px #bebebe,
-                -15px -15px 30px #ffffff;
-   }
+        -15px -15px 30px #ffffff;
+}
+
 
 .btnNuevo {
     width: 15em;
@@ -80,30 +85,30 @@
     border-radius: 30em;
     font-size: 15px;
     font-family: inherit;
-    border: none;
+    border: 1px solid #e8e8e8;
     position: relative;
     overflow: hidden;
     z-index: 1;
     box-shadow: 4px 4px 10px #c5c5c5,
-                -6px -6px 12px #ffffff;
-   }
-   
+        -6px -6px 12px #ffffff;
+}
 
-   .btnNuevo::before {
-    content: '';
-    width: 0;
-    height: 3em;
-    border-radius: 30em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-   }
-   
+.btnNuevo:hover {
+    border: 1px solid white;
+}
 
-   .btnNuevo:hover::before {
-    width: 15em;
-   }
+.btnNuevo:active {
+    box-shadow: 4px 4px 12px #c5c5c5,
+        -4px -4px 12px #ffffff;
+}
+
+.text-Fin {
+    text-decoration: none;
+    color: #0D0D0D;
+}
+
+.text-Con {
+    text-decoration: none;
+    color: #F6F6F6;
+}
+
